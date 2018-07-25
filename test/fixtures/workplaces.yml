@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  CH-score: 1
+  pay: 1
+  opportunities: 1
+  bosses: 1
+  fun: 1
+  diversity: 1
+  happiness: 1
+  female-friendly: 1
+  multicultural: 1
+  perks: 1
+  benefits: 1
+  worklife-balance: 1
+
+two:
+  CH-score: 1
+  pay: 1
+  opportunities: 1
+  bosses: 1
+  fun: 1
+  diversity: 1
+  happiness: 1
+  female-friendly: 1
+  multicultural: 1
+  perks: 1
+  benefits: 1
+  worklife-balance: 1
