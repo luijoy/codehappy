@@ -14,4 +14,8 @@
  *= require_self
  */
 
+/* Use Bulma for styling */
+
+$green: #00E676;
+$primary: $green;
 @import "bulma";
