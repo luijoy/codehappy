@@ -19,166 +19,43 @@
   <section>
     <div class="container">
       <div class="columns is-multiline is-mobile">
-        <div class="column is-3">
-          <div class="card">
-            <header class="card-header">
-              <figure class="image is-128x128">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Facebook_logo_36x36.svg/768px-Facebook_logo_36x36.svg.png">
-              </figure>
-              <p class="card-header-title">
-                Facebook
-              </p>
-              <a href="#" class="card-header-icon" aria-label="more options">
-                <span class="icon">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </a>
-            </header>
-            <div class="card-content">
-              <div class="content">
-                <div class="columns is-multiline is-mobile">
-                  <div class="column is-12">
-                    <p>CodeHappy score</p>
-                    <progress class="progress is-warning" value="60" max="100">60%</progress>
+        <% @workplaces.each do |workplace| %>
+          <div class="column is-3">
+            <div class="card">
+              <header class="card-header">
+                <figure class="image is-128x128">
+                  <%= image_tag "#{workplace.logo}.png" %>
+                </figure>
+                <p class="card-header-title">
+                  <%= workplace.name %>
+                </p>
+                <a href="#" class="card-header-icon" aria-label="more options">
+                  <span class="icon">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </a>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <div class="columns is-multiline is-mobile">
+                    <div class="column is-12">
+                      <p>DL score</p>
+                      <progress class="progress is-warning" value="<%= workplace.CH %>" max="100">
+                        <%= workplace.CH %>
+                      </progress>
+                    </div>
+                    <div class="column is-12">
+                      <h2 class="is-size-3 has-text-grey-darker has-text-center has-text-weight-normal">
+                        <%= workplace.pay %> 🔥 </h2>
+                    </div>
+                    <br>
                   </div>
-                  <div class="column is-12">
-                    <h2 class="is-size-3 has-text-grey-darker has-text-center has-text-weight-normal">$125,673 🔥 </h2>
-                  </div>
-                  <br>
+                  <%= link_to "More 🔎", workplace_path(workplace) %>
                 </div>
-                <a class="button is-rounded">More 🔎</a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="column is-3">
-          <div class="card">
-            <header class="card-header">
-              <figure class="image is-128x128">
-                <img src="https://i0.wp.com/industry-buzz.com/wp-content/uploads/2014/11/Screen-Shot-2014-11-21-at-10.48.50-AM.png?resize=721%2C516">
-              </figure>
-              <p class="card-header-title">
-                Twitter
-              </p>
-              <a href="#" class="card-header-icon" aria-label="more options">
-                <span class="icon">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </a>
-            </header>
-            <div class="card-content">
-              <div class="content">
-                <div class="columns is-multiline is-mobile">
-                  <div class="column is-12">
-                    <p>CodeHappy score</p>
-                    <progress class="progress is-warning" value="60" max="100">60%</progress>
-                  </div>
-                  <div class="column is-12">
-                    <h2 class="is-size-3 has-text-grey-darker has-text-center has-text-weight-normal">$125,673 🔥 </h2>
-                  </div>
-                  <br>
-                </div>
-                <a class="button is-rounded">More 🔎</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column is-3">
-          <div class="card">
-            <header class="card-header">
-              <figure class="image is-128x128">
-                <img src="https://www.clearvoice.com/wp-content/uploads/2015/11/google.jpg">
-              </figure>
-              <p class="card-header-title">
-                Google
-              </p>
-              <a href="#" class="card-header-icon" aria-label="more options">
-                <span class="icon">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </a>
-            </header>
-            <div class="card-content">
-              <div class="content">
-                <div class="columns is-multiline is-mobile">
-                  <div class="column is-12">
-                    <p>CodeHappy score</p>
-                    <progress class="progress is-warning" value="60" max="100">60%</progress>
-                  </div>
-                  <div class="column is-12">
-                    <h2 class="is-size-3 has-text-grey-darker has-text-center has-text-weight-normal">$125,673 </h2>
-                  </div>
-                  <br>
-                </div>
-                <a class="button is-rounded">More 🔎</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column is-3">
-          <div class="card">
-            <header class="card-header">
-              <figure class="image is-128x128">
-                <img src="http://www.turnerduckworth.com/media/filer_public/86/18/86187bcc-752a-46f4-94d8-0ce54b98cd46/td-amazon-smile-logo-01-large.jpg">
-              </figure>
-              <p class="card-header-title">
-                Amazon
-              </p>
-              <a href="#" class="card-header-icon" aria-label="more options">
-                <span class="icon">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </a>
-            </header>
-            <div class="card-content">
-              <div class="content">
-                <div class="columns is-multiline is-mobile">
-                  <div class="column is-12">
-                    <p>CodeHappy score</p>
-                    <progress class="progress is-warning" value="60" max="100">60%</progress>
-                  </div>
-                  <div class="column is-12">
-                    <h2 class="is-size-3 has-text-grey-darker has-text-center has-text-weight-normal">$125,673 </h2>
-                  </div>
-                  <br>
-                </div>
-                <a class="button is-rounded">More 🔎</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column is-3">
-          <div class="card">
-            <header class="card-header">
-              <figure class="image is-128x128">
-                <img src="https://www.clearvoice.com/wp-content/uploads/2015/11/google.jpg">
-              </figure>
-              <p class="card-header-title">
-                Google
-              </p>
-              <a href="#" class="card-header-icon" aria-label="more options">
-                <span class="icon">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </a>
-            </header>
-            <div class="card-content">
-              <div class="content">
-                <div class="columns is-multiline is-mobile">
-                  <div class="column is-12">
-                    <p>CodeHappy score</p>
-                    <progress class="progress is-warning" value="60" max="100">60%</progress>
-                  </div>
-                  <div class="column is-12">
-                    <h2 class="is-size-3 has-text-grey-darker has-text-center has-text-weight-normal">$125,673 </h2>
-                  </div>
-                  <br>
-                </div>
-                <a class="button is-rounded">More 🔎</a>
-              </div>
-            </div>
-          </div>
-        </div>
+          <% end %>
       </div>
     </div>
   </section>
