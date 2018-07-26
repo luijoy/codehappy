@@ -5,7 +5,7 @@ ruby '2.4.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
-
+gem 'pg'
 gem "bulma-rails"
 gem 'rufo'
 # Use Puma as the app server
@@ -61,8 +61,8 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
+  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
